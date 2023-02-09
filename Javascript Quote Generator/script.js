@@ -36,8 +36,7 @@ person: "Soren Kierkegaard"
 
 btn.addEventListener('click', function(){
     let random = Math.floor(Math.random() * quotes.length);
-    console.log(random)
-    quote.InnerText = quotes[random].quote;
-    person.InnerText = quotes[random].person;
+    quote.innerText = quotes[random].quote;
+    person.innerText = quotes[random].person;
 
 })
