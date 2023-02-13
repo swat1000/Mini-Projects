@@ -13,7 +13,6 @@
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: ;
     background-color: lightgrey;
     height: 400px;
     width: 350px;
