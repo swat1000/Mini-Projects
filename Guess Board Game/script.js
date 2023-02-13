@@ -10,3 +10,12 @@ btn.addEventListener("click", function () {
       this.style.backgroundColor = "blue"
     }
   });
+
+  btn.addEventListener("click", function(){
+    var word = "H"
+    if(input == word){
+      para.innerHTML = "Congrats you WIN"
+    } else {
+      para.innerHTML = "You Lose!! Play Again"
+    }
+  })
