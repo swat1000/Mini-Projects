@@ -1,3 +1,4 @@
+// making list  with keys and values
 const wordList = [
     {word:"air",hint:"type of pollution"},
     {word:"python",hint:"a programming language"},
@@ -6,20 +7,20 @@ const wordList = [
     {word:"water",hint:"to be saved and used"},
     {word:"mouse",hint:"part of computer"}
 ]
-
+//Declaring variables with HTML element classes link
 const inputs = document.querySelector(".inputs"),
 hintTag = document.querySelector(".hint span"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letter span"),
 resetBtn = document.querySelector(".reset-btn"),
 typingInput = document.querySelector(".typing-input");
-
+// Making empty arrays and declaring
 let word, maxGuesses, incorrectLetters = [], correctLetters = [];
-
+// Function to find random word and hint
 function randomWord() {
     let ranItem = wordList[Math.floor(Math.random() * wordList.length)];
     word = ranItem.word;
-    maxGuesses = word.length >= 5 ? 8 : 6;
+    maxGuesses = word.length >= 5 ? 8 : 6;// Ternary operator used
     correctLetters = []; incorrectLetters = [];
     hintTag.innerText = ranItem.hint;
     guessLeft.innerText = maxGuesses;
@@ -32,6 +33,7 @@ function randomWord() {
     }
 }
 randomWord();
+//Intialize function and comparing input with target value
 
 function initGame(e) {
     let key = e.target.value.toLowerCase();
@@ -51,7 +53,7 @@ function initGame(e) {
         wrongLetter.innerText = incorrectLetters;
     }
     typingInput.value = "";
-
+     // Declaring result function for winning or loosing
     setTimeout(() => {
         if(correctLetters.length === word.length) {
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
@@ -64,7 +66,7 @@ function initGame(e) {
         }
     }, 100);
 }
-
+// using eventlistener for function to work on click
 resetBtn.addEventListener("click", randomWord);
 typingInput.addEventListener("input", initGame);
 inputs.addEventListener("click", () => typingInput.focus());
