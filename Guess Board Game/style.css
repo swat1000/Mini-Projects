@@ -1,43 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding:50px;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    background-color: lightgrey;
-    height: 400px;
-    width: 350px;
-    padding: 30px;
-    border-radius: 10px;
-    align-items: center;
-  }
-  h2 {
-    margin-bottom: 10px;
-  }
-  
-#guess {
-    margin-top: 20px;
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 4px;
-  }
-  button {
-    color: black;
-    background-color: blue;
-    padding: 10px;
-    margin-top: 15px;
-    border-radius: 6px;
-    width: 120px;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+ }
+ body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: aqua;
+ }
