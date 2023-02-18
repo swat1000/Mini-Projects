@@ -11,12 +11,12 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: lightblue;
+    background: rgb(0, 0, 0);
 }
 .main-container{
     width: 650px;
     padding: 25px 30px;
-    background: white;
+    background: rgb(28, 29, 32);
     overflow: hidden;
     position: relative;
     border-radius: 15px;
