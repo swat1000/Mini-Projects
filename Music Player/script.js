@@ -32,3 +32,12 @@ function playMusic(){
     playPauseBtn.querySelector("i").innerText = "pause";
     mainAudio.play();
   }
+
+
+
+
+  function pauseMusic(){
+    wrapper.classList.remove("paused");
+    playPauseBtn.querySelector("i").innerText = "play_arrow";
+    mainAudio.pause();
+  }  
