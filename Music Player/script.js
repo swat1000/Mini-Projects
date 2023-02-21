@@ -36,8 +36,26 @@ function playMusic(){
 
 
 
-  function pauseMusic(){
+function pauseMusic(){
     wrapper.classList.remove("paused");
     playPauseBtn.querySelector("i").innerText = "play_arrow";
     mainAudio.pause();
-  }  
+  }
+  
+function prevMusic(){
+    musicIndex--; 
+    musicIndex < 1 ? musicIndex = allMusic.length : musicIndex = musicIndex;
+  loadMusic(musicIndex);
+  playMusic();
+  playingSong(); 
+
+  } 
+  
+  function nextMusic(){
+    musicIndex++; 
+    musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
+  loadMusic(musicIndex);
+  playMusic();
+  playingSong(); 
+}  
+
