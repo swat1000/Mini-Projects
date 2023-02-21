@@ -11,3 +11,17 @@ progressBar = progressArea.querySelector(".progress-bar"),
 musicList = wrapper.querySelector(".music-list"),
 moreMusicBtn = wrapper.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
+
+
+let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
+isMusicPaused = true;
+window.addEventListener("load", ()=>{
+  loadMusic(musicIndex);
+  playingSong(); 
+});
+function loadMusic(indexNumb){
+  musicName.innerText = allMusic[indexNumb - 1].name;
+  musicArtist.innerText = allMusic[indexNumb - 1].artist;
+  musicImg.src = `images/${allMusic[indexNumb - 1].src}.jpg`;
+  mainAudio.src = `songs/${allMusic[indexNumb - 1].src}.mp3`;
+}
